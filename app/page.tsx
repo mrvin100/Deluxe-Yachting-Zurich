@@ -4,7 +4,7 @@ import {
   HomeCategories,
   HomeExperience,
   // HomeGift,
-  // HomeLocation,
+  HomeLocation,
   HomePublication,
 } from "@/components/home";
 
@@ -14,8 +14,8 @@ export default function Home() {
       <HomeBanner />
       <HomeCategories />
       <Spacer extraSmall />
-      {/* <HomeLocation />
-      <Spacer extraSmall /> */}
+      <HomeLocation />
+      <Spacer extraSmall />
       <HomePublication />
       <Spacer extraSmall />
       {/* <HomeGift /> */}

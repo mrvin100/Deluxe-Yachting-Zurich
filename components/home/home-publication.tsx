@@ -18,7 +18,7 @@ export const HomePublication: FC = () => {
             groups we can also arrange individual cruises.
           </TypographyP>
           <Button variant={"link"}>
-            Eplore the Yatch&nbsp;
+            Eplore our Yatch&nbsp;
             <ChevronRight className="w-6 h-6" />
           </Button>
         </div>

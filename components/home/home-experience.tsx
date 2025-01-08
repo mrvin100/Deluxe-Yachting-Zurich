@@ -53,7 +53,7 @@ export const HomeExperience:FC = () => {
       <AppContainer className="max-w-full">
         <Spacer extraSmall />
         <TypographyH2 className="text-center">
-          The Kelanie Experience
+          The Deluxe Yachting Zurich Experience
         </TypographyH2>
         <Spacer tooSmall />
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 text-center">

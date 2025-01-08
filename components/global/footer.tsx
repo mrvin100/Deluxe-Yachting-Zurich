@@ -11,7 +11,7 @@ import * as motion from "motion/react-client";
 enum FooterLinkGroup {
   CLIENT_CARE = "Client Care",
   OUR_COMPANY = "Our Company",
-  RELATED_KELANIE_SITES = "Related Kelanie Sites",
+  RELATED_SITES = "Related Sites",
 }
 interface FooterLink {
   link: string;
@@ -50,8 +50,8 @@ const footerLinks: FooterLink[] = [
     group: FooterLinkGroup.CLIENT_CARE,
   },
   {
-    text: "Kelanie Select Financing",
-    link: "/kelanie-select-financing",
+    text: "DYZ Select Financing",
+    link: "/DYZ-select-financing",
     group: FooterLinkGroup.CLIENT_CARE,
   },
   {
@@ -65,8 +65,8 @@ const footerLinks: FooterLink[] = [
     group: FooterLinkGroup.CLIENT_CARE,
   },
   {
-    text: "World of Kelanie",
-    link: "/world-of-kelanie",
+    text: "World of DYZ",
+    link: "/world-of-DYZ",
     group: FooterLinkGroup.OUR_COMPANY,
   },
   {
@@ -80,13 +80,13 @@ const footerLinks: FooterLink[] = [
     group: FooterLinkGroup.OUR_COMPANY,
   },
   {
-    text: "California Privacy",
-    link: "/california-privacy",
+    text: "Zürich - Switzerland Privacy",
+    link: "/zürich-switzerland-privacy",
     group: FooterLinkGroup.OUR_COMPANY,
   },
   {
-    text: "Kelanie Careers",
-    link: "/kelanie-careers",
+    text: "DYZ Careers",
+    link: "/DYZ-careers",
     group: FooterLinkGroup.OUR_COMPANY,
   },
   {
@@ -112,32 +112,32 @@ const footerLinks: FooterLink[] = [
   {
     text: "Wedding & Gift Registry",
     link: "/wedding-&-gift-registry",
-    group: FooterLinkGroup.RELATED_KELANIE_SITES,
+    group: FooterLinkGroup.RELATED_SITES,
   },
   {
     text: "Business Accounts",
     link: "/business-accounts",
-    group: FooterLinkGroup.RELATED_KELANIE_SITES,
+    group: FooterLinkGroup.RELATED_SITES,
   },
   {
-    text: "Kelanie for the Press",
-    link: "/kelanie-for-the-press",
-    group: FooterLinkGroup.RELATED_KELANIE_SITES,
+    text: "DYZ for the Press",
+    link: "/DYZ-for-the-press",
+    group: FooterLinkGroup.RELATED_SITES,
   },
   {
-    text: "The Kelanie & Co. Foundation",
-    link: "/the-kelanie-&-co.-foundation",
-    group: FooterLinkGroup.RELATED_KELANIE_SITES,
+    text: "The Deluxe Yachting Zurich Foundation",
+    link: "/the-deluxe-yachting-zurich-foundation",
+    group: FooterLinkGroup.RELATED_SITES,
   },
   {
-    text: "Kelanie Alertline",
-    link: "/kelanie-alertline",
-    group: FooterLinkGroup.RELATED_KELANIE_SITES,
+    text: "Deluxe Yachting Zurich Alertline",
+    link: "/DYZ-alertline",
+    group: FooterLinkGroup.RELATED_SITES,
   },
   {
     text: "Site Index",
     link: "/site-index",
-    group: FooterLinkGroup.RELATED_KELANIE_SITES,
+    group: FooterLinkGroup.RELATED_SITES,
   },
 ];
 
@@ -200,13 +200,11 @@ export const Footer: FC = () => {
           </motion.div>
           <motion.div initial="hidden" whileInView="visible" variants={list}>
             <TypographyH3 className="my-4">
-              {FooterLinkGroup.RELATED_KELANIE_SITES}
+              {FooterLinkGroup.RELATED_SITES}
             </TypographyH3>
             <motion.div className="flex flex-col gap-2" variants={item}>
               {footerLinks
-                .filter(
-                  (link) => link.group === FooterLinkGroup.RELATED_KELANIE_SITES
-                )
+                .filter((link) => link.group === FooterLinkGroup.RELATED_SITES)
                 .map((element, i) => (
                   <Link
                     key={i}
@@ -220,10 +218,12 @@ export const Footer: FC = () => {
           </motion.div>
           <div className="hidden lg:block"></div>
           <motion.div initial="hidden" whileInView="visible" variants={list}>
-            <TypographyH3 className="my-4">Latest from Deluxe Yachting Zurich</TypographyH3>
+            <TypographyH3 className="my-4">
+              Latest from Deluxe Yachting Zurich
+            </TypographyH3>
             <TypographyP>
-              Be the first to know about exciting new designs, special events,
-              store openings and much more.
+              Be the first to know about new classic yachts, special events,
+              yacht openings and more.
             </TypographyP>
             <Spacer extraSmall />
             <FooterForm />
@@ -250,7 +250,7 @@ export const Footer: FC = () => {
       </AppContainer>
       <Spacer extraSmall />
       <div className="text-center mt-10 lg:mt-0">
-        <TypographyH4>© DYZ. 2024</TypographyH4>
+        <TypographyH4>© White Pearl Cruises GmbH - 2017-2024</TypographyH4>
       </div>
       <Spacer extraSmall />
     </section>

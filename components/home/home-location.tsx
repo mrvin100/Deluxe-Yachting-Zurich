@@ -46,7 +46,8 @@ export const HomeLocation: FC = () => {
             salon for unforgettable gatherings or an intimate escape on the
             water, each vessel promises exceptional comfort, modern amenities,
             and breathtaking views.
-            <br /> <br />
+            <br /> <br />npx shadcn@latest add carousel
+            
             Explore our fleet and find your perfect match for an extraordinary
             lake experience.
           </TypographyP>

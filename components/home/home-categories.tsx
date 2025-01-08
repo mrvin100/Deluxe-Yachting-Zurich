@@ -6,23 +6,26 @@ import Image from "next/image";
 
 export const HomeCategories: FC = () => {
   const categories: CategoryCardType[] = [
-    { title: "Le Studio 45", image: "/images/category_image1.webp" },
-    { title: "Donna Anna", image: "/images/category_image2.webp" },
+    { title: "Events", image: "/images/category_image1.webp" },
+    { title: "Taxi Services", image: "/images/category_image2.webp" },
+    { title: "Charters", image: "/images/category_image3.webp" },
+    // { title: "Taxi Services", image: "/images/category_image2.webp" },
   ];
   return (
     <motion.section>
       <AppContainer>
         <Spacer tooSmall />
         <div className="text-center space-y-3">
-          <TypographyH1>Charter</TypographyH1>
-          <TypographyP className="text-sm mx-auto">
-            Enjoy the spacious layout, the luxurious mahogany and teak trim,
-            exclusive beverages, selected cigars, superior sound, live saxophone
-            entertainment – and much more.
+          <TypographyH1>Our Services</TypographyH1>
+          <TypographyP className="text-sm max-w-lg mx-auto">
+            Discover our premier services: Host exclusive events, enjoy seamless
+            taxi transfers, embark on luxurious charters, or experience the
+            timeless charm of our classic yachts, including &apos;Le Studio 45&apos; and
+            &apos;Donna Anna&apos;.
           </TypographyP>
         </div>
         <Spacer extraSmall />
-        <div className="grid md:grid-cols-2 gap-4 justify-center space-y-0">
+        <div className="grid md:grid-cols-3 gap-4 justify-center space-y-0">
           {categories.map((category) => (
             <CategoryCard
               key={category.title}
@@ -51,7 +54,13 @@ function CategoryCard({ image, title }: CategoryCardType) {
       }}
       whileTap={{ scale: 0.9, rotate: 3 }}
     >
-      <Image src={image} alt="category image" height={1000} width={1000} className="object-cover mx-auto w-full max-w-72 h-48" />
+      <Image
+        src={image}
+        alt="category image"
+        height={1000}
+        width={1000}
+        className="object-cover mx-auto w-full max-w-72 h-48"
+      />
       <TypographyH4 className="text-center font-normal mt-2">
         {title}
       </TypographyH4>

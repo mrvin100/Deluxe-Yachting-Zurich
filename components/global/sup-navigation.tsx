@@ -4,10 +4,8 @@ import { Button } from "../ui/button";
 import {
   BellRing,
   CalendarFold,
-  LocateFixed,
   LucideIcon,
   Search,
-  ShoppingBag,
   UserRound,
 } from "lucide-react";
 import {
@@ -17,6 +15,7 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 import { cn } from "@/lib/utils";
+import { ModeToggle } from "./toggle-theme-button";
 
 interface SupNavItem {
   icon: LucideIcon;
@@ -24,13 +23,12 @@ interface SupNavItem {
 }
 const leftSupNavItems: SupNavItem[] = [
   { icon: Search, hoverMessage: "" },
-  { icon: LocateFixed, hoverMessage: "" },
+  // { icon: LocateFixed, hoverMessage: "How to choose your destination" },
   { icon: BellRing, hoverMessage: "Contact Us" },
 ];
 const rightSupNavItems: SupNavItem[] = [
   { icon: CalendarFold, hoverMessage: "Book an Appointment" },
   { icon: UserRound, hoverMessage: "Sign In or Create an Account" },
-  { icon: ShoppingBag, hoverMessage: "Your Shopping Bag" },
 ];
 
 export const SupNavigation: FC = () => {
@@ -54,6 +52,7 @@ export const SupNavigation: FC = () => {
             hoverMessage={navItem.hoverMessage}
           />
         ))}
+        <ModeToggle />
       </div>
     </div>
   );

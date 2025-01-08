@@ -4,7 +4,14 @@ import { TypographyH3, TypographyH4, TypographyP } from "../ui/typographies";
 import Link from "next/link";
 import { Spacer } from "./spacer";
 import { FooterForm } from "./footer-form";
-import { Facebook, Instagram, Linkedin, Twitter, Youtube } from "lucide-react";
+import {
+  Facebook,
+  Instagram,
+  LucideIcon,
+  Mail,
+  MessageCircle,
+  Phone,
+} from "lucide-react";
 import { Button } from "../ui/button";
 import * as motion from "motion/react-client";
 
@@ -141,6 +148,19 @@ const footerLinks: FooterLink[] = [
   },
 ];
 
+interface SocialNetwork {
+  icon: LucideIcon;
+  href: string;
+}
+
+const socialNetworks: SocialNetwork[] = [
+  { icon: Phone, href: "tel:+41795024040" },
+  { icon: MessageCircle, href: "https://web.whatsapp.com/send?phone=+41795024040" },
+  { icon: Mail, href: "mailto:info@wp.cruises" },
+  { icon: Facebook, href: "https://facebook.com/wp.cruises" },
+  { icon: Instagram, href: "https://instagram.com/white.pearl.cruises" },
+];
+
 export const Footer: FC = () => {
   const list = {
     visible: { opacity: 1 },
@@ -229,21 +249,15 @@ export const Footer: FC = () => {
             <FooterForm />
             <Spacer extraSmall />
             <motion.div className="space-x-3 space-y-3" variants={item}>
-              <Button variant={"secondary"} size={"icon"}>
-                <Instagram className="inline-block w-6 h-6" />
-              </Button>
-              <Button variant={"secondary"} size={"icon"}>
-                <Facebook className="inline-block w-6 h-6" />
-              </Button>
-              <Button variant={"secondary"} size={"icon"}>
-                <Linkedin className="inline-block w-6 h-6" />
-              </Button>
-              <Button variant={"secondary"} size={"icon"}>
-                <Twitter className="inline-block w-6 h-6" />
-              </Button>
-              <Button variant={"secondary"} size={"icon"}>
-                <Youtube className="inline-block w-6 h-6" />
-              </Button>
+              {socialNetworks &&
+                socialNetworks &&
+                socialNetworks.map((socialNetwork, i) => (
+                  <Button key={i} variant={"secondary"} size={"icon"} asChild>
+                    <Link href={socialNetwork.href}>
+                      <socialNetwork.icon className="inline-block w-6 h-6" />
+                    </Link>
+                  </Button>
+                ))}
             </motion.div>
           </motion.div>
         </div>

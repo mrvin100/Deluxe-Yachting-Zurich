@@ -25,7 +25,7 @@ const experiences: ExperienceType[] = [
     title: "Book Your Yacht Event",
     description:
       "Plan an unforgettable experience on the water. Reserve your private yacht event today.",
-    link: { text: "Book Now", href: "/book-now" },
+    link: { text: "Book An Event", href: "/book-now" },
   },
   {
     icon: BellRing,

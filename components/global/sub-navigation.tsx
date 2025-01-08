@@ -30,38 +30,21 @@ interface JewelryCategories {
 }
 
 const jewelryCategories: JewelryCategories[] = [
-  // {
-  //   title: "HOME",
-  //   href: "/",
-  //   // description: "Bold and balanced, our square collection makes a statement.",
-  //   // subitems: [
-  //   //   { title: "Square Necklaces", href: "/square/necklaces" },
-  //   //   { title: "Square Earrings", href: "/square/earrings" },
-  //   //   { title: "Square Rings", href: "/square/rings" },
-  //   //   { title: "Square Bracelets", href: "/square/bracelets" },
-  //   // ],
-  //   // featured: {
-  //   //   title: "The Square Collection",
-  //   //   href: "/square/featured",
-  //   //   description: "Explore the geometric beauty of our Square collection.",
-  //   //   image: "/images/square-collection.jpg",
-  //   // },
-  // },
   {
     title: "TAXI SERVICE",
     href: "/taxi-service",
     description:
       "Deluxe Transfer Services by Water Taxi",
     subitems: [
-      { title: "Circle Necklaces", href: "/circle/necklaces" },
-      { title: "Circle Earrings", href: "/circle/earrings" },
-      { title: "Circle Rings", href: "/circle/rings" },
-      { title: "Circle Bracelets", href: "/circle/bracelets" },
+      { title: "Vintage Motor Yachts", href: "/circle/necklaces" },
+      { title: "First Class Service", href: "/circle/earrings" },
+      { title: "Modern Equipment", href: "/circle/rings" },
+      { title: "Bespoke Cruises", href: "/circle/bracelets" },
     ],
     featured: {
-      title: "Circle Highlights",
+      title: "Our Vision",
       href: "/circle/featured",
-      description: "Discover the versatility of our Circle collection.",
+      description: "The Roaring Twenties and Swinging Sixties – Reloaded on Lake Zurich",
       image: "/images/circle-collection.jpg",
     },
   },
@@ -69,45 +52,27 @@ const jewelryCategories: JewelryCategories[] = [
     title: "EVENTS",
     href: "/events",
     description:
-      "Edgy and modern, our triangle collection is perfect for those who want to stand out.",
+      "Exclusive Events on the Lake",
     subitems: [
-      { title: "Triangle Necklaces", href: "/triangle/necklaces" },
-      { title: "Triangle Earrings", href: "/triangle/earrings" },
-      { title: "Triangle Rings", href: "/triangle/rings" },
-      { title: "Triangle Bracelets", href: "/triangle/bracelets" },
+      { title: "Cheese on the Lake", href: "/triangle/necklaces" },
+      { title: "Liquid Spirit Cruise", href: "/triangle/earrings" },
+      { title: "Fume on the Lake", href: "/triangle/rings" },
+      { title: "Fire in the Sky", href: "/triangle/bracelets" },
     ],
     featured: {
-      title: "Triangle Trends",
+      title: "Incomming Events",
       href: "/triangle/featured",
-      description: "Embrace the unique style of our Triangle collection.",
+      description: "Embrace the unique style of our Yatch collection.",
       image: "/images/triangle-collection.jpg",
     },
   },
-  // {
-    // title: "ABOUT",
-    // href: "/about",
-    // description:
-    //   "Soft and feminine, our oval collection is perfect for adding a touch of elegance to any outfit.",
-    // subitems: [
-    //   { title: "Oval Necklaces", href: "/oval/necklaces" },
-    //   { title: "Oval Earrings", href: "/oval/earrings" },
-    //   { title: "Oval Rings", href: "/oval/rings" },
-    //   { title: "Oval Bracelets", href: "/oval/bracelets" },
-    // ],
-    // featured: {
-    //   title: "Oval Elegance",
-    //   href: "/oval/featured",
-    //   description: "Experience the timeless beauty of our Oval collection.",
-    //   image: "/images/oval-collection.jpg",
-    // },
-  // },
 ];
 
 export const SubNavigation: FC = () => {
   return (
     <NavigationMenu className="hidden md:block max-w-full justify-center">
       <NavigationMenuList>
-      <Button><Link href={'/'} className="font-light uppercase">Home</Link></Button>
+      <Button><Link href={'/'} className="font-light uppercase tracking-widest">Home</Link></Button>
         {jewelryCategories.map((category) => (
           <NavigationMenuItem key={category.title}>
             <NavigationMenuTrigger className="font-light">{category.title}</NavigationMenuTrigger>

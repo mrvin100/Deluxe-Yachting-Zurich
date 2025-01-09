@@ -3,11 +3,13 @@
 import { useEffect, useRef, useState, FC } from "react";
 import { Pause, Play, Volume1, VolumeX } from "lucide-react";
 import { Button } from "../ui/button";
+import { cn } from "@/lib/utils";
 
 interface VideoPlayerProps {
   src: string
+  className?: string
 }
-export const VideoPlayer: FC<VideoPlayerProps> = ({src}) => {
+export const VideoPlayer: FC<VideoPlayerProps> = ({src, className}) => {
   const [isPaused, setIsPaused] = useState(false);
   const [isMuted, setIsMuted] = useState(true);
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -48,7 +50,7 @@ export const VideoPlayer: FC<VideoPlayerProps> = ({src}) => {
     }
   };
   return (
-    <div className="border relative w-[100%] max-w-6xl mx-auto overflow-hidden">
+    <div className={cn("border relative w-[100%] max-w-6xl mx-auto overflow-hidden", className)}>
       <div className="absolute bottom-4 right-4 z-10 left-4 mx-auto">
         <VideoPlayerControls
           progress={videoProgress}
@@ -60,7 +62,7 @@ export const VideoPlayer: FC<VideoPlayerProps> = ({src}) => {
           width={1}
         />
       </div>
-      <video className="w-full" ref={videoRef} loop muted={isMuted} autoPlay>
+      <video className="w-full h-full object-cover" ref={videoRef} loop muted={isMuted} autoPlay>
         <source
           src={src}
           type="video/mp4"

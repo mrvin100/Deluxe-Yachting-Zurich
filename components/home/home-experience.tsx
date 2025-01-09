@@ -49,7 +49,7 @@ const experiences: ExperienceType[] = [
 
 export const HomeExperience:FC = () => {
   return (
-    <section className="bg-stone-50 p-4 my-4">
+    <section className="p-4 my-4">
       <AppContainer className="max-w-full">
         <Spacer extraSmall />
         <TypographyH2 className="text-center">

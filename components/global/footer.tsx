@@ -264,7 +264,7 @@ export const Footer: FC = () => {
       </AppContainer>
       <Spacer extraSmall />
       <div className="text-center mt-10 lg:mt-0">
-        <TypographyH4>© White Pearl Cruises GmbH - 2017-2024</TypographyH4>
+        <TypographyH4>© White Pearl Cruises GmbH - 2017-2025</TypographyH4>
       </div>
       <Spacer extraSmall />
     </section>

@@ -25,7 +25,7 @@ export const HomeBanner: FC = () => {
               unique, private cruise on Lake Zurich
             </TypographyP>
             <motion.button
-              className="font-light text-base px-4 py-3 text-secondary-foreground border"
+              className="font-light text-base px-4 py-3 text-secondary-foreground border border-primary"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
             >

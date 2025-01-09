@@ -10,15 +10,16 @@ export const HomePublication: FC = () => {
     <section>
       <AppContainer className="text-center grid md:grid-cols-3 items-center gap-4 max-w-full">
         <div className="order-last md:-order-none md:ml-4 p-4 md:p-0">
-          <TypographyH2>Exclusive Events on the Lake</TypographyH2>
+          <TypographyH2>Exclusive Events on Lake Zurich</TypographyH2>
           <TypographyP className="text-sm md:max-w-xs mx-auto">
-            Come join our exclusive events on selected dates throughout the
-            year. Each of our 6 tables can seat up to 4 guests. Therefore, we
-            can offer up to 24 tickets for each event. Furthermore, for closed
-            groups we can also arrange individual cruises.
+            Join us for unforgettable events on Lake Zurich, running from
+            November to February. With prices starting at just CHF 149, indulge
+            in themed cruises ranging from fondue dinners to gin tastings and
+            cigar sundowners. Don’t miss out on these extraordinary experiences
+            aboard our luxurious yachts.
           </TypographyP>
           <Button variant={"link"}>
-            Explore our Yatch&nbsp;
+            Book Your Ticket Now&nbsp;
             <ChevronRight className="w-6 h-6" />
           </Button>
         </div>

@@ -15,20 +15,27 @@ export interface ImageBoxType {
 const images: ImageBoxType[] = [
   {
     imageBox: [
-      { image: "/deluxe-yachting-zurich_logo.png" },
-      { image: "/deluxe-yachting-zurich_logo.png" },
+      { image: "/images/gallery-box1-image1.webp" },
+      { image: "/images/gallery-box1-image2.webp" },
+      { image: "/images/gallery-box1-image3.webp" },
+      { image: "/images/gallery-box1-image4.webp" },
+      { image: "/images/gallery-box1-image5.webp" },
     ],
   },
   {
     imageBox: [
-      { image: "/home_banner_image1.jpg" },
-      { image: "/home_banner_image1.jpg" },
+      { image: "/images/gallery-box2-image1.webp" },
+      { image: "/images/gallery-box2-image2.webp" },
+      { image: "/images/gallery-box2-image3.webp" },
+      { image: "/images/gallery-box2-image4.webp" },
+      { image: "/images/gallery-box2-image5.webp" },
     ],
   },
   {
     imageBox: [
       { image: "/home_banner_image2.webp" },
-      { image: "/home_banner_image2.webp" },
+      { image: "/images/gallery-box3-image2.webp" },
+      { image: "/images/gallery-box3-image3.webp" },
     ],
   },
 ];

@@ -2,7 +2,6 @@ import { FC } from "react";
 import Link from "next/link";
 import { Button } from "../ui/button";
 import {
-  BellRing,
   CalendarFold,
   LucideIcon,
   Search,
@@ -15,19 +14,18 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 import { cn } from "@/lib/utils";
-import { ModeToggle } from "./toggle-theme-button";
+import { ToggleThemeButton } from "./toggle-theme-button";
+import { LocalSwitcherButton } from "./local-switcher-button";
 
 interface SupNavItem {
   icon: LucideIcon;
   hoverMessage?: string;
 }
 const leftSupNavItems: SupNavItem[] = [
-  { icon: Search, hoverMessage: "" },
-  // { icon: LocateFixed, hoverMessage: "How to choose your destination" },
-  { icon: BellRing, hoverMessage: "Contact Us" },
+  { icon: Search, hoverMessage: "Search here" },
+  { icon: CalendarFold, hoverMessage: "Book an Appointment" },
 ];
 const rightSupNavItems: SupNavItem[] = [
-  { icon: CalendarFold, hoverMessage: "Book an Appointment" },
   { icon: UserRound, hoverMessage: "Sign In or Create an Account" },
 ];
 
@@ -52,7 +50,8 @@ export const SupNavigation: FC = () => {
             hoverMessage={navItem.hoverMessage}
           />
         ))}
-        <ModeToggle />
+        <LocalSwitcherButton />
+        <ToggleThemeButton />
       </div>
     </div>
   );

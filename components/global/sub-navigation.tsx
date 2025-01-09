@@ -45,7 +45,7 @@ const jewelryCategories: JewelryCategories[] = [
       title: "Our Vision",
       href: "/circle/featured",
       description: "The Roaring Twenties and Swinging Sixties – Reloaded on Lake Zurich",
-      image: "/images/circle-collection.jpg",
+      image: "/items-category-image1.webp",
     },
   },
   {
@@ -63,7 +63,7 @@ const jewelryCategories: JewelryCategories[] = [
       title: "Incomming Events",
       href: "/triangle/featured",
       description: "Embrace the unique style of our Yatch collection.",
-      image: "/images/triangle-collection.jpg",
+      image: "/images/items-category-image2.webp",
     },
   },
 ];

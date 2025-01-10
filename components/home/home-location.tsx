@@ -2,7 +2,7 @@
 import { ChevronRight } from "lucide-react";
 import { AppContainer } from "../global";
 import { Button } from "../ui/button";
-import { TypographyH1, TypographyP } from "../ui/typographies";
+import { TypographyH2, TypographyP } from "../ui/typographies";
 import { FC, useRef } from "react";
 import { motion } from "framer-motion";
 import { CarouselBox } from "./gallery-box";
@@ -28,7 +28,7 @@ export const HomeLocation: FC = () => {
       className="overflow-hidden"
     >
       <AppContainer className="text-center">
-        <TypographyH1 className="mt-4 mb-8">Discover the Essence & Elegance of Lake Zurich</TypographyH1>
+        <TypographyH2 className="mt-4 mb-8">Discover the Essence & Elegance of Lake Zurich</TypographyH2>
         <div className="mt-4 text-center grid md:grid-cols-2 lg:grid-cols-3 items-center gap-8 max-w-full">
           <div className="lg:col-span-2">
             <CarouselBox />

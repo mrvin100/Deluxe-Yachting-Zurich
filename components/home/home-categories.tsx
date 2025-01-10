@@ -1,7 +1,7 @@
 import { FC } from "react";
 import * as motion from "motion/react-client";
 import { AppContainer, Spacer } from "../global";
-import { TypographyH1, TypographyH4, TypographyP } from "../ui/typographies";
+import { TypographyH2, TypographyH4, TypographyP } from "../ui/typographies";
 import Image from "next/image";
 
 export const HomeCategories: FC = () => {
@@ -16,7 +16,7 @@ export const HomeCategories: FC = () => {
       <AppContainer>
         <Spacer tooSmall />
         <div className="text-center space-y-3">
-          <TypographyH1>Our Services</TypographyH1>
+          <TypographyH2>Our Services</TypographyH2>
           <TypographyP className="text-sm px-4 mx-auto leading-6">
             Discover our premier services: Host exclusive events, enjoy seamless
             taxi transfers, embark on luxurious charters, or experience the

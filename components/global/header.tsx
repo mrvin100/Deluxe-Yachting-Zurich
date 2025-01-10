@@ -36,7 +36,7 @@ export const Header: FC = () => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.3 }}
     >
-      <AppContainer className="p-0">
+      <AppContainer className="p-0 max-w-full">
         <SupNavigation />
         <SubNavigation />
       </AppContainer>

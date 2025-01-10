@@ -31,10 +31,9 @@ interface JewelryCategories {
 
 const jewelryCategories: JewelryCategories[] = [
   {
-    title: "TAXI SERVICE",
+    title: "taxi service",
     href: "/taxi-service",
-    description:
-      "Deluxe Transfer Services by Water Taxi",
+    description: "Deluxe Transfer Services by Water Taxi",
     subitems: [
       { title: "Vintage Motor Yachts", href: "/circle/necklaces" },
       { title: "First Class Service", href: "/circle/earrings" },
@@ -44,15 +43,15 @@ const jewelryCategories: JewelryCategories[] = [
     featured: {
       title: "Our Vision",
       href: "/circle/featured",
-      description: "The Roaring Twenties and Swinging Sixties – Reloaded on Lake Zurich",
-      image: "/items-category-image1.webp",
+      description:
+        "The Roaring Twenties and Swinging Sixties – Reloaded on Lake Zurich",
+      image: "/images/items-category-image1.webp",
     },
   },
   {
-    title: "EVENTS",
+    title: "events",
     href: "/events",
-    description:
-      "Exclusive Events on the Lake",
+    description: "Exclusive Events on the Lake",
     subitems: [
       { title: "Cheese on the Lake", href: "/triangle/necklaces" },
       { title: "Liquid Spirit Cruise", href: "/triangle/earrings" },
@@ -70,71 +69,93 @@ const jewelryCategories: JewelryCategories[] = [
 
 export const SubNavigation: FC = () => {
   return (
-    <NavigationMenu className="hidden md:block max-w-full justify-center">
-      <NavigationMenuList>
-      <Button><Link href={'/'} className="font-light uppercase tracking-widest">Home</Link></Button>
-        {jewelryCategories.map((category) => (
-          <NavigationMenuItem key={category.title}>
-            <NavigationMenuTrigger className="font-light">{category.title}</NavigationMenuTrigger>
-            <NavigationMenuContent>
-              <div className="grid w-[780px] lg:w-[1080px] xl:w-[1280px] gap-3 md:grid-cols-2 lg:grid-cols-3">
-                <div className="row-span-3">
-                  <NavigationMenuLink asChild>
-                    <Link
-                      className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
-                      href={category.href}
-                    >
-                      <div className="mb-2 mt-4 text-lg font-medium">
-                        {category.title}
-                      </div>
-                      <p className="text-sm leading-tight text-muted-foreground">
-                        {category.description}
-                      </p>
-                    </Link>
-                  </NavigationMenuLink>
-                </div>
-                <div className="col-span-1 lg:col-span-2">
-                  <div className="grid gap-4">
-                    {category.featured && (
-                      <FeaturedItem item={category.featured} />
-                    )}
-                    <div>
-                      <h3 className="my-2 ml-3 text-sm font-medium leading-none">
-                        Categories
-                      </h3>
-                      <ul className="grid gap-2 md:grid-cols-2">
-                        { category.subitems && category.subitems.length > 0 && category.subitems.map((item) => (
-                          <ListItem
-                            key={item.title}
-                            href={item.href}
-                            title={item.title}
-                          />
-                        ))}
-                      </ul>
+    <NavigationMenu className="w-full max-w-full justify-center px-4 lg:px-8">
+      <NavigationMenuList className="w-full flex justify-between items-center">
+        <div className="flex justify-center gap-4 md:gap-6 items-center mx-auto">
+          <Button variant="link" className="px-2 lg:px-4">
+            <Link
+              href={"/"}
+              className="font-light capitalize tracking-widest text-xs lg:text-sm"
+            >
+              Home
+            </Link>
+          </Button>
+          {jewelryCategories.map((category) => (
+            <NavigationMenuItem key={category.title}>
+              <NavigationMenuTrigger className="bg-none !capitalize">
+                <Button variant={'link'} className="font-light capitalize tracking-widest text-xs lg:text-sm">{category.title}</Button>
+              </NavigationMenuTrigger>
+              <NavigationMenuContent>
+                <div className="w-[calc(100vw-1.11rem)] md:w-[calc(100vw-1.098rem)] p-4 md:grid-cols-2 lg:grid-cols-3">
+                  <div className="grid gap-3 md:grid-cols-2 lg:grid-cols-3">
+                    <div className="row-span-3">
+                      <NavigationMenuLink asChild>
+                        <Link
+                          className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
+                          href={category.href}
+                        >
+                          <div className="mb-2 mt-4 text-lg font-medium">
+                            {category.title}
+                          </div>
+                          <p className="text-sm leading-tight text-muted-foreground">
+                            {category.description}
+                          </p>
+                        </Link>
+                      </NavigationMenuLink>
                     </div>
-                    {category.links && (
-                      <div>
-                        <h3 className="mb-2 text-sm font-medium leading-none">
-                          Useful Links
-                        </h3>
-                        <ul className="grid gap-2 md:grid-cols-2">
-                          {category.links.map((link) => (
-                            <ListItem
-                              key={link.title}
-                              href={link.href}
-                              title={link.title}
-                            />
-                          ))}
-                        </ul>
+                    <div className="col-span-1 lg:col-span-2">
+                      <div className="grid gap-4">
+                        {category.featured && (
+                          <FeaturedItem item={category.featured} />
+                        )}
+                        <div>
+                          <h3 className="my-2 ml-3 text-sm font-medium leading-none">
+                            Categories
+                          </h3>
+                          <ul className="grid gap-2 md:grid-cols-2">
+                            {category.subitems &&
+                              category.subitems.length > 0 &&
+                              category.subitems.map((item) => (
+                                <ListItem
+                                  key={item.title}
+                                  href={item.href}
+                                  title={item.title}
+                                />
+                              ))}
+                          </ul>
+                        </div>
+                        {category.links && (
+                          <div>
+                            <h3 className="mb-2 text-sm font-medium leading-none">
+                              Useful Links
+                            </h3>
+                            <ul className="grid gap-2 md:grid-cols-2">
+                              {category.links.map((link) => (
+                                <ListItem
+                                  key={link.title}
+                                  href={link.href}
+                                  title={link.title}
+                                />
+                              ))}
+                            </ul>
+                          </div>
+                        )}
                       </div>
-                    )}
+                    </div>
                   </div>
                 </div>
-              </div>
-            </NavigationMenuContent>
-          </NavigationMenuItem>
-        ))}
-        <Button variant={'ghost'}><Link href={'/about'} className="font-light uppercase">About</Link></Button>
+              </NavigationMenuContent>
+            </NavigationMenuItem>
+          ))}
+          <Button variant="link" className="px-2 lg:px-4">
+            <Link
+              href={"/about"}
+              className="font-light capitalize text-xs lg:text-sm"
+            >
+              About
+            </Link>
+          </Button>
+        </div>
       </NavigationMenuList>
     </NavigationMenu>
   );

@@ -31,7 +31,7 @@ const rightSupNavItems: SupNavItem[] = [
 
 export const SupNavigation: FC = () => {
   return (
-    <div className="flex justify-between gap-3 items-center my-4">
+    <div className="flex justify-between gap-3 items-center m-4">
       <div>
         {leftSupNavItems.map((navItem, i) => (
           <TooltipIcon

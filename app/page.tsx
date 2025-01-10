@@ -14,9 +14,9 @@ export default function Home() {
       <HomeBanner />
       <HomeCategories />
       <Spacer extraSmall />
-      <HomeLocation />
-      <Spacer extraSmall />
       <HomePublication />
+      <Spacer extraSmall />
+      <HomeLocation />
       <Spacer extraSmall />
       {/* <HomeGift /> */}
       <HomeExperience />

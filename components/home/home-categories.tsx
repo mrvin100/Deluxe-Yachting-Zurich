@@ -17,11 +17,11 @@ export const HomeCategories: FC = () => {
         <Spacer tooSmall />
         <div className="text-center space-y-3">
           <TypographyH1>Our Services</TypographyH1>
-          <TypographyP className="text-sm max-w-lg mx-auto">
+          <TypographyP className="text-sm px-4 mx-auto leading-6">
             Discover our premier services: Host exclusive events, enjoy seamless
             taxi transfers, embark on luxurious charters, or experience the
-            timeless charm of our classic yachts, including &apos;Le Studio 45&apos; and
-            &apos;Donna Anna&apos;.
+            timeless charm of our classic yachts, including <strong>Le Studio 45</strong> and&nbsp;
+            <strong>Donna Anna</strong>.
           </TypographyP>
         </div>
         <Spacer extraSmall />
@@ -61,7 +61,7 @@ function CategoryCard({ image, title }: CategoryCardType) {
         width={1000}
         className="object-cover mx-auto w-full max-w-72 h-48"
       />
-      <TypographyH4 className="text-center font-normal mt-2">
+      <TypographyH4 className="text-center font-normal mt-2 cursor-pointer hover:text-primary">
         {title}
       </TypographyH4>
     </motion.div>

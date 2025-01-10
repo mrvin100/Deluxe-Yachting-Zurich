@@ -31,14 +31,32 @@ interface JewelryCategories {
 
 const jewelryCategories: JewelryCategories[] = [
   {
+    title: "home",
+    href: "/",
+    description: "Chill out and relax while conducting a unique, private cruise on Lake Zurich",
+    subitems: [
+      { title: "Le Studio 45", href: "/le-studio-45" },
+      { title: "Donna Anna", href: "/donna-anna" },
+      { title: "Soho Lounge Feeling on Lake Zurich", href: "/soho-lounge-feeling-on-lake-zurich" },
+      { title: "Venice Style Boating in Switzerland", href: "/venice-style-boating-in-switzerland" },
+    ],
+    featured: {
+      title: "Our Boats",
+      href: "/boats/featured",
+      description:
+        "Let yourself get carried away into a different era on board of our classical yachts.",
+      image: "/images/items-category-image3.webp",
+    },
+  },
+  {
     title: "taxi service",
     href: "/taxi-service",
     description: "Deluxe Transfer Services by Water Taxi",
     subitems: [
-      { title: "Vintage Motor Yachts", href: "/circle/necklaces" },
-      { title: "First Class Service", href: "/circle/earrings" },
-      { title: "Modern Equipment", href: "/circle/rings" },
-      { title: "Bespoke Cruises", href: "/circle/bracelets" },
+      { title: "Vintage Motor Yachts", href: "/vintage-motor-yachts" },
+      { title: "First Class Service", href: "/first-class-service" },
+      { title: "Modern Equipment", href: "/modern-equipment" },
+      { title: "Bespoke Cruises", href: "/bespoke-cruises" },
     ],
     featured: {
       title: "Our Vision",
@@ -53,10 +71,10 @@ const jewelryCategories: JewelryCategories[] = [
     href: "/events",
     description: "Exclusive Events on the Lake",
     subitems: [
-      { title: "Cheese on the Lake", href: "/triangle/necklaces" },
-      { title: "Liquid Spirit Cruise", href: "/triangle/earrings" },
-      { title: "Fume on the Lake", href: "/triangle/rings" },
-      { title: "Fire in the Sky", href: "/triangle/bracelets" },
+      { title: "Cheese on the Lake", href: "/cheese-on-the-lake" },
+      { title: "Liquid Spirit Cruise", href: "/liquid-spirit-cruise" },
+      { title: "Fume on the Lake", href: "/fume-on-the-lake" },
+      { title: "Fire in the Sky", href: "/fire-in-the-sky" },
     ],
     featured: {
       title: "Incomming Events",
@@ -69,24 +87,24 @@ const jewelryCategories: JewelryCategories[] = [
 
 export const SubNavigation: FC = () => {
   return (
-    <NavigationMenu className="w-full max-w-full justify-center px-4 lg:px-8">
+    <NavigationMenu className="w-full max-w-full justify-center sm:px-4 lg:px-8">
       <NavigationMenuList className="w-full flex justify-between items-center">
-        <div className="flex justify-center gap-4 md:gap-6 items-center mx-auto">
-          <Button variant="link" className="px-2 lg:px-4">
+        <div className="flex flex-wrap sm:flex-nowrap justify-center gap-2 sm:gap-4 md:gap-6 items-center mx-auto">
+          {/* <Button variant="link" className="px-2 lg:px-4">
             <Link
               href={"/"}
               className="font-light capitalize tracking-widest text-xs lg:text-sm"
             >
               Home
             </Link>
-          </Button>
+          </Button> */}
           {jewelryCategories.map((category) => (
             <NavigationMenuItem key={category.title}>
-              <NavigationMenuTrigger className="bg-none !capitalize">
+              <NavigationMenuTrigger className="bg-none">
                 <Button variant={'link'} className="font-light capitalize tracking-widest text-xs lg:text-sm">{category.title}</Button>
               </NavigationMenuTrigger>
               <NavigationMenuContent>
-                <div className="w-[calc(100vw-1.11rem)] md:w-[calc(100vw-1.098rem)] p-4 md:grid-cols-2 lg:grid-cols-3">
+                <div className="w-[calc(100vw-1.15rem)] sm:w-[calc(100vw-1.11rem)] md:w-[calc(100vw-1.098rem)] p-4 md:grid-cols-2 lg:grid-cols-3">
                   <div className="grid gap-3 md:grid-cols-2 lg:grid-cols-3">
                     <div className="row-span-3">
                       <NavigationMenuLink asChild>
@@ -94,7 +112,7 @@ export const SubNavigation: FC = () => {
                           className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
                           href={category.href}
                         >
-                          <div className="mb-2 mt-4 text-lg font-medium">
+                          <div className="mb-2 mt-4 text-lg font-medium text-primary capitalize">
                             {category.title}
                           </div>
                           <p className="text-sm leading-tight text-muted-foreground">

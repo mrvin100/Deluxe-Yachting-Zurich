@@ -11,14 +11,14 @@ export const HomePublication: FC = () => {
       <AppContainer className="text-center grid md:grid-cols-3 items-center gap-4 max-w-full">
         <div className="order-last md:-order-none md:ml-4 p-4 md:p-0">
           <TypographyH2>Exclusive Events on Lake Zurich</TypographyH2>
-          <TypographyP className="text-sm md:max-w-xs mx-auto">
+          <TypographyP className="text-sm md:max-w-xs mx-auto leading-6">
             Join us for unforgettable events on Lake Zurich, running from
             November to February. With prices starting at just CHF 149, indulge
             in themed cruises ranging from fondue dinners to gin tastings and
             cigar sundowners. Don’t miss out on these extraordinary experiences
             aboard our luxurious yachts.
           </TypographyP>
-          <Button variant={"link"}>
+          <Button className="my-3">
             Book Your Ticket Now&nbsp;
             <ChevronRight className="w-6 h-6" />
           </Button>

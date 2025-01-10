@@ -16,25 +16,25 @@ export const HomeBanner: FC = () => {
   // const scale = useTransform(scrollYProgress, [0, 0.5], [1, 1.2]);
   return (
     <motion.section ref={targetRef} style={{ opacity }}>
-      <AppContainer className="relative max-w-full grid md:grid-cols-2 lg:grid-cols-3 h-[85vh]">
+      <AppContainer className="relative max-w-full grid md:grid-cols-2 h-[85vh]">
         <div className="absolute z-10 top-0 bottom-0 right-0 left-0 md:static grid items-center justify-cente backdrop-blur-sm hover:backdrop-blur-none transition-transform text-white md:text-secondary-foreground">
           <div className="text-center space-y-4 p-4 md:p-0">
             <TypographyH1>Welcome on Board!</TypographyH1>
-            <TypographyP className="text-sm md:max-w-sm mx-auto">
+            <TypographyP className="text-sm md:max-w-sm mx-auto leading-6">
               Let yourself get carried away into a different era on board of our
               classical yachts. Relax while conducting a unique, private cruise
               on Lake Zurich
             </TypographyP>
             <motion.button
-              className="font-light text-base px-4 py-3 text-secondary-foreground border border-primary"
+              className="font-medium text-base px-4 py-2 text-secondary-foreground bg-primary border border-primary"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
             >
-              OUR BOATS
+              Our Boats
             </motion.button>
           </div>
         </div>
-        <motion.div className="bg-red-50 overflow-hidden">
+        <motion.div className="bg-indigo-50 overflow-hidden">
           {/* <motion.img
             src="/home_banner_image1.jpg"
             alt="home banner image"
@@ -48,7 +48,7 @@ export const HomeBanner: FC = () => {
           /> */}
           <VideoPlayer src="/videos/visit-post-with-DYZ.mp4" className="h-full" />
         </motion.div>
-        <div className="bg-muted/5 hidden lg:block">
+        <div className="bg-muted/5 hidden">
           <Image
             src="/home_banner_image2.webp"
             alt="home banner image"

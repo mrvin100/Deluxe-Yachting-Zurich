@@ -67,7 +67,7 @@ export const HomeExperience:FC = () => {
                 {experience.title}
               </TypographyH3>
               <TypographyP className="mx-auto max-w-xs">{experience.description}</TypographyP>
-              <Button variant={"link"} asChild>
+              <Button className="mx-auto mt-1" asChild>
                 <Link href={experience.link.href}>
                   {experience.link.text}&nbsp;
                   <ChevronRight />

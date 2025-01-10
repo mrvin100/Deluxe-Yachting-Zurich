@@ -174,7 +174,7 @@ export const Footer: FC = () => {
   return (
     <section>
       <Button
-        // variant={"secondary"}
+        variant={"secondary"}
         className="w-full border-primary font-light"
         asChild
       >
